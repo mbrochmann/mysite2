@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+
+{% comment %}
+{% block title %}{{ title }} | {{ site_title|default:_('Most Excellent Django site admin') }}{% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('My lovely polls administration') }}</a></h1>
+{% endblock %}
+{% endcomment %}
+
+{% block title %} {{'Why hello, I am:'}} {{ title }} | {{ 'Most Excellent Django site admin' }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">My lovely polls Administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
